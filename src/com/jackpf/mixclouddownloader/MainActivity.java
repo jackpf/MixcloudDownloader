@@ -1,4 +1,4 @@
-package com.example.mixclouddownloader;
+package com.jackpf.mixclouddownloader;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,7 +6,8 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 
-import com.example.mixclouddownloader.Download.DownloadThread;
+import com.jackpf.mixclouddownloader.R;
+import com.jackpf.mixclouddownloader.Download.DownloadThread;
 
 /**
  * Main activity
@@ -50,6 +51,6 @@ public class MainActivity extends Activity
 	{
 		String url = ((EditText) findViewById(R.id.url)).getText().toString();
 		
-		new DownloadThread().execute(url);
+		new DownloadThread(this).execute(url);
 	}
 }

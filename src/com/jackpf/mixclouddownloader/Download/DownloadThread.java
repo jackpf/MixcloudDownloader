@@ -1,4 +1,4 @@
-package com.example.mixclouddownloader.Download;
+package com.jackpf.mixclouddownloader.Download;
 
 import java.security.InvalidParameterException;
 
@@ -49,9 +49,7 @@ public class DownloadThread extends AsyncTask<String, Void, Void>
 	    
 	    String url = params[0];
 	    
-	    
-	    
-	    new Downloader.download(url);
+	    //new Downloader.download(url);
 	    
 		return null;
 	}

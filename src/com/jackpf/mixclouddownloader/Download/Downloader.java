@@ -1,4 +1,4 @@
-package com.example.mixclouddownloader.Download;
+package com.jackpf.mixclouddownloader.Download;
 
 /**
  * Downloader

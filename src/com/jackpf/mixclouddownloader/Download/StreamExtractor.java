@@ -1,4 +1,4 @@
-package com.example.mixclouddownloader.Download;
+package com.jackpf.mixclouddownloader.Download;
 
 import java.io.IOException;
 import java.security.InvalidParameterException;
@@ -42,6 +42,8 @@ public class StreamExtractor
         String previewUrl = m.group(0);
         
         // Format the stream url to point to the actual stream
+        
+        return "";
     }
     
     private boolean valid(String url)
