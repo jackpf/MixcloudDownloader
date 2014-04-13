@@ -33,7 +33,7 @@ public class MainActivity extends Activity
 		
 		instance = this;
 		
-		predictMixUrl();
+		setMixUrl();
 		populateDownloads();
 	}
 
@@ -68,8 +68,18 @@ public class MainActivity extends Activity
 	}
 	
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
-	public static void predictMixUrl()
+	private void setMixUrl()
 	{
+	    if (Intent.ACTION_SEND.equals(getIntent().getAction())) {   
+	        if (getIntent().getExtras().containsKey(Intent.EXTRA_TEXT)) {
+	            String uri = getIntent().getExtras().getString(Intent.EXTRA_TEXT);
+	            if (!uri.equals("")) {
+    	            ((EditText) instance.findViewById(R.id.url)).setText(uri);
+    	            return;
+	            }
+	        }
+	    }
+	    
 		if(Integer.valueOf(android.os.Build.VERSION.SDK) < 11)
 			return;
 		
